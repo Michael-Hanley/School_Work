@@ -9,6 +9,7 @@ History
 Date      Initials       Action
 =================================================
 02/03/2015  MPH          Wrote program/compiled
+03/25/2015  MPH          Added sort
 *********************************************** */
 
 #include <iomanip>
@@ -17,6 +18,7 @@ Date      Initials       Action
 #include <string>
 #include <fstream>
 #include <cstring>
+
 using namespace std;
 double CalcAvg(int, int, int, int, int &);
 void ClearLines(int);
@@ -28,7 +30,7 @@ const int SIZE = 20;
 int main()
 {
 bool swapflag = false;          //no swaps when false
-int i; 		         	// counter
+int i=0; 		         	// counter
 int numgolf;                    // total number of golfers
 int lowscore = 400;             // lowest score
 int round1[SIZE], round2[SIZE],
@@ -50,7 +52,8 @@ if(input_file.fail())
 	cout << "end of program \n\n";
 	return 1;                          //error end of the program
 }
-  while(i<SIZE && input_file >> round1[i]) //there is a line of data to read
+
+  while(i < SIZE && input_file >> round1[i]) //there is a line of data to read
   {		input_file >> round2[i];   //read golf score
 		input_file >> round3[i];   //read golf score
 		input_file >> round4[i];   //read golf score
@@ -187,7 +190,7 @@ double CalcAvg(int r1, int r2, int r3, int r4, int &tot)
 }
 /*******************************************************************
 Function swap = will swap two strings
-input parameters: &name1, &name2
+input parameters: name[i], name[i+1]
 output paramters: &name1, &name2
 *******************************************************************/
 void swap(string &name1, string &name2)
@@ -197,7 +200,11 @@ void swap(string &name1, string &name2)
   name1 = name2;
   name2 = temp;
 }
-
+/*******************************************************************
+Function swap = will swap two strings
+input parameters: round1-4[i] and round1-4[i+1], total[i] and total [i+1]
+output paramters: &name1, &name2
+*******************************************************************/
 void swap(int &num1, int &num2)
 {
 int temp;
@@ -205,10 +212,14 @@ temp = num1;
 num1 = num2;
 num2 = temp;
 }
-
+/*******************************************************************
+Function swap = will swap two strings
+input parameters: average[i] and average[i+1]
+output paramters: &name1, &name2
+*******************************************************************/
 void swap(double &num1, double &num2)
 {
-int temp;
+double temp;
 temp = num1;
 num1 = num2;
 num2 = temp;

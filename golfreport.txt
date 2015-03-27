@@ -5,12 +5,12 @@ Golfers'   Names      rnd1 rnd2 rnd3 rnd4 total average
 Webb       Simpson      68   71   59   63  261     65
 Dustin     Johnson      68   68   67   59  262     66
 Billy      Horschel     54   70   70   68  262     66
-Steve      Stricker     66   71   68   65  270     67
+Steve      Stricker     66   71   68   65  270     68
 Zach       Johnson      69   66   69   68  272     68
 Justin     Rose         68   68   70   67  273     68
 Roberto    Castro       67   71   72   65  275     69
 Jason      Dufner       74   70   66   65  275     69
 Jordan     Spieth       68   67   71   74  280     70
-Henrik     Stenson      80   66   69   88  303     75
+Henrik     Stenson      80   66   69   88  303     76
 
 The winner is Webb Simpson
